@@ -5,7 +5,7 @@ const Profile = props => (
     <img className={css.img} src={props.user.avatar} alt="User Avatar" />
     <h1 className={css.title}>{props.user.username}</h1>
     <p className={css.social}>
-      <a className={css.link} href="#">
+      <a className={css.link} href="https://goit.global/ua/">
         @{props.user.tag}
       </a>
     </p>
