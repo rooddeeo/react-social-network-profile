@@ -1,4 +1,37 @@
-@import-normalize; /* bring in normalize.css styles */
+@import 'normalize.css';
+
+/* -- RESET -- */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+/* -- STYLE -- */
 
 body {
   margin: 0;
@@ -7,6 +40,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 code {

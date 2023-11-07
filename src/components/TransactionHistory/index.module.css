@@ -1,0 +1,33 @@
+.transactions {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.head {
+  background-color: skyblue;
+}
+
+.tableHeader {
+  border: 1px solid #cfcdcd;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tableBody {
+  color: #7893ab;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #cfcdcd;
+}
+
+.bgTableBody:nth-child(even) {
+  background-color: #f1f1f1;
+}
