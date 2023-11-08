@@ -1,8 +1,8 @@
 import React from 'react';
-import Profile from './components/Profile';
-import Statistics from './components/Statistics';
-import FriendList from './components/FriendList';
-import TransactionHistory from './components/TransactionHistory';
+import Profile from './components/Profile/Profile.jsx';
+import Statistics from './components/Statistics/Statistics.jsx';
+import FriendList from './components/FriendList/FriendList.jsx';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory.jsx';
 import user from './json/user.json';
 import friends from './json/friends.json';
 import data from './json/data.json';
@@ -11,11 +11,21 @@ import transactions from './json/transactions.json';
 export const App = () => {
   return (
     <>
-      <Profile user={user} />
-      <Statistics title="Upload stats" data={data} />
-      <Statistics data={data} />
+      <Profile
+        profile={{
+          user: {
+            avatar: user.avatar,
+            username: user.username,
+            tag: user.tag,
+            location: user.location,
+            stats: user.stats,
+          },
+        }}
+      />
+      <Statistics title="Upload stats" statistics={data} />
+      <Statistics statistics={data} />
       <FriendList friends={friends} />
-      <TransactionHistory transactions={transactions} />
+      <TransactionHistory history={transactions} />
     </>
   );
 };

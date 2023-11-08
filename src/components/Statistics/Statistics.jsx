@@ -1,4 +1,4 @@
-import css from './index.module.css';
+import css from './Statistics.module.css';
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -6,11 +6,11 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const Statistics = props => (
+const Statistics = ({ title, statistics }) => (
   <section className={css.statistics}>
-    <h2 className={css.title}>{props.title}</h2>
+    {title && <h2 className={css.title}>{title}</h2>}
     <ul className={css.list}>
-      {props.data.map(stat => (
+      {statistics.map(stat => (
         <li
           className={`${css.item} ${css.randomBackgraund}`}
           style={{ backgroundColor: getRandomHexColor() }}
